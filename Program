@@ -1,11 +1,15 @@
 #Undersøg om tal er primtal
 def primtal (n):
    i=2
+   n = int(input("Skriv tal, du vil tjekke om er primtal: "))  #Her skriver man selv tallet.
    while i<n:         #kører kun mens n er større end i.
       if n%i != 0:    #Hvis der er en modolus mellem n og i, mens den ikke er 0, så lægger vi 1 til i.
          i+=1
       else:
+         print("Dette er ikke et primtal")
          return False   #Hvis der ikke er nogen rest, så return False
+   else:
+      print("Dette er et primtal")
    return True
 
-print(primtal(499))     #Her kører den funktionen primtal, hvor n kan defineres inde i parantesen.
+print(primtal(5))     #Her kører den funktionen primtal.
